@@ -8,7 +8,6 @@ export default class Kontak extends React.Component{
         return (
             <div className="container mt-3 " id="contact">
             <h2 className= "text-center" ><img src={Info} className="kontak" alt="kotak" width="30px" height="30px"/>Contact Me</h2>
-            <div className="card mx-auto" >
               <div className="card-body">
                 <div className="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Email</label>
@@ -23,7 +22,6 @@ export default class Kontak extends React.Component{
                 </div>
               </div>
             </div>
-          </div>
         )
     }
 }
