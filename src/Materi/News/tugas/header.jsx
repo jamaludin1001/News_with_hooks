@@ -17,8 +17,23 @@ import Berita from "./view";
     }
     
     handleSubmit = () =>{
-        this.setState({status:'onclick'})
+       const q = this.state.search 
+        fetch('https://newsapi.org/v2/top-headlines?country=id&apiKey=599e0889d56045f4bbff7bc47af4dd32&q='+q)
+        .then(response => response.json())
+        .then(
+                (result) => {
+                  this.setState({
+                    articles: result.articles
+                  });
+                  
+                }
+        );
     }
+
+    handleInputChange=(e) =>{this.setState({
+        search:e.target.value
+    })}
+
     componentDidMount(){
         fetch('https://newsapi.org/v2/top-headlines?country=id&apiKey=599e0889d56045f4bbff7bc47af4dd32&q=')
         .then(response => response.json())
@@ -53,12 +68,12 @@ import Berita from "./view";
                    <div className="body" >
                    <div className="col-md-8">
                    <InputGroup className="">
-                        <FormControl className="input-keyword"
+                        <FormControl onChange={this.handleInputChange} className="input-keyword"
                         placeholder="Search News"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
                         />
-                        <Button variant="outline-secondary"   onChange={this.handleInputChange} onClick={this.handleSubmit}
+                        <Button variant="outline-secondary"    onClick={this.handleSubmit}
                          id="button-addon2">
                         Search
                         </Button>
