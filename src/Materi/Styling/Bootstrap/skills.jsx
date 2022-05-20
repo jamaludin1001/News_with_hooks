@@ -9,7 +9,8 @@ export default class Skills extends React.Component{
             <div className="container mt-3" id="skills">
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <h2 className="fs-bold fs-2 text-center" > <img src={Icon_skill} className="bio" alt="skill1" width="30px" height="30px"/>Skills</h2>
+                <h2 className="fs-bold fs-2 text-center" > <img src={Icon_skill} 
+                className="bio" alt="skill1" width="30px" height="30px"/>Skills</h2>
                     
                 <ul>
                 <li>php</li>
