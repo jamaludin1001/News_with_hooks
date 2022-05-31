@@ -11,7 +11,6 @@ import Berita from "./view";
             articles:[],
             input: '',
             search:'',
-            status: ''
             
         }
     }
@@ -33,7 +32,7 @@ import Berita from "./view";
     handleInputChange=(e) =>{this.setState({
         search:e.target.value
     })}
-
+    
     componentDidMount(){
         fetch('https://newsapi.org/v2/top-headlines?country=id&apiKey=599e0889d56045f4bbff7bc47af4dd32&q=')
         .then(response => response.json())
@@ -45,9 +44,7 @@ import Berita from "./view";
                   
                 }
         );
-    }
-    componentDidUpdate(){
-        fetch('https://newsapi.org/v2/top-headlines?country=id&q=${this.state.input}apiKey=599e0889d56045f4bbff7bc47af4dd32&q=')
+    
     }
     
     render(){
@@ -67,7 +64,7 @@ import Berita from "./view";
                     
                    <div className="body" >
                    <div className="col-md-8">
-                   <InputGroup className="">
+                   <InputGroup className=" mb-3">
                         <FormControl onChange={this.handleInputChange} className="input-keyword"
                         placeholder="Search News"
                         aria-label="Recipient's username"
@@ -80,10 +77,9 @@ import Berita from "./view";
                     </InputGroup>
                     </div>
                      
-                    <div className="grid">
-                    {
-                        
-                        this.state.articles.map(articles=>{
+                    <main className="grid">
+                    {  
+                    this.state.articles.map((articles)=>{
                             return <Berita  urlToImage={articles.urlToImage} 
                                             title={articles.title}
                                             description={articles.description}
@@ -96,7 +92,7 @@ import Berita from "./view";
                         
                     }
 
-                    </div>         
+                    </main>         
                      
     </div>
     </div>

@@ -14,7 +14,7 @@ const Berita= (props)=>{
                             <Card.Text>{props.description}</Card.Text>
                             <stong> <i> <p className="card-author mb-2 text-muted">{props.author}</p> </i> </stong>
                             <u> <p className="card-publisheadAt mb-2 text-muted">{props.publishedAt}</p> </u>
-                            <Button href={props.link} variant="primary" target="_blank">Go somewhere</Button>
+                            <Button href={props.link} variant="primary" target="_blank">Detail</Button>
                             </Card.Body>
                     </Card>
                 </Col >

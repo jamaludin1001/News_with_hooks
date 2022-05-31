@@ -1,6 +1,11 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://jamaludinsaputraaa.com/",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
@@ -22,6 +27,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+
+  
+
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -45,3 +58,4 @@
     "style-loader": "^3.3.1"
   }
 }
+
