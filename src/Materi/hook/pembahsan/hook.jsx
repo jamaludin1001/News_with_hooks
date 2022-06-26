@@ -9,21 +9,15 @@ const Hooks = (props) => {
 
     useEffect(()=>{
         
-        if ( props.send.status === 'submit' && props.send.search !== '') {
-            fetch(`https://newsapi.org/v2/top-headlines?country=id&q=${props.send.search}&apiKey=599e0889d56045f4bbff7bc47af4dd32&q`)
-            .then(response => response.json())
-            .then((data) => {
-                    setNews(data.data.articles);
-                })
-        }
-        else
-        {
+       
+        
             fetch('https://newsapi.org/v2/top-headlines?country=id&apiKey=599e0889d56045f4bbff7bc47af4dd32&q=')
             .then(response => response.json())
             .then((data) => {
-                    setNews(data.data.articles);
+                    setNews(data.articles);
                 })
-        }
+            
+        
 })
     return (
         <Fragment>

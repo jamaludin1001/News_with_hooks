@@ -1,7 +1,6 @@
 import React from "react";
-import News from "./Materi/News_lifecycle";
-
-// import News from "./Materi/hook";
+// import News from "./Materi/News_lifecycle";
+import News from "./Materi/hook";
 // import Utama from "./Materi/Ajax";
 // import MyComponent from "./Materi/Ajax/Pembahasan/news";
 // import LifeCycle from "./Materi/Lifecycle"; 
