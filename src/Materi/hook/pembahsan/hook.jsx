@@ -6,19 +6,25 @@ import Berita from "./view";
 
 const Hooks = (props) => {
     let [news, setNews] = useState([]);
+    let [search, setSearch] = useState("");
 
     useEffect(()=>{
-        
-       
-        
-            fetch('https://newsapi.org/v2/top-headlines?country=id&apiKey=599e0889d56045f4bbff7bc47af4dd32&q=')
+            fetch('https://newsapi.org/v2/everything?q=apple&from=2022-06-25&to=2022-06-25&sortBy=popularity&apiKey=de31adcbe0a24fbba991c2e0933fd211')
             .then(response => response.json())
             .then((data) => {
                     setNews(data.articles);
                 })
-            
         
-})
+        },[])
+    
+    const onSubmitButton = () => {
+        alert ("telah di submut")
+            fetch('https://newsapi.org/v2/everything?q=apple&from=2022-06-25&to=2022-06-25&sortBy=popularity&apiKey=de31adcbe0a24fbba991c2e0933fd211' + search)
+            .then(response => response.json())
+            .then((data) => {
+                    setNews(data.articles);
+                })
+    }
     return (
         <Fragment>
              <div>
@@ -38,8 +44,11 @@ const Hooks = (props) => {
                         placeholder="Search News"
                         aria-label="Recipient's username"
                         aria-describedby="basic-addon2"
+                        value={search}
+                        onChange ={(event)=> setSearch (event.target.value)}
                         />
                         <Button variant="outline-secondary"   className="submit"
+                         onClick= {onSubmitButton}
                          id="button-addon2">
                         Search
                         </Button>

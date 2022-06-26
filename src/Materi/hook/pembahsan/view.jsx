@@ -9,8 +9,8 @@ const Berita= (props)=>{
                 <Col > 
                     <Card >
                             <Card.Img variant="top" src={props.urlToImage} /> 
-                            <Card.Body>
-                            <Card.Title>{props.title}</Card.Title>
+                            <Card.Body >
+                            <Card.Title key={props.id}>{props.title}</Card.Title>
                             <Card.Text>{props.description}</Card.Text>
                             <stong> <i> <p className="card-author mb-2 text-muted">{props.author}</p> </i> </stong>
                             <u> <p className="card-publisheadAt mb-2 text-muted">{props.publishedAt}</p> </u>
