@@ -9,7 +9,7 @@ const Hooks = (props) => {
     let [search, setSearch] = useState("");
 
     useEffect(()=>{
-            fetch('https://newsapi.org/v2/everything?q=apple&from=2022-06-25&to=2022-06-25&sortBy=popularity&apiKey=de31adcbe0a24fbba991c2e0933fd211')
+            fetch('https://newsapi.org/v2/top-headlines?country=id&apiKey=599e0889d56045f4bbff7bc47af4dd32')
             .then(response => response.json())
             .then((data) => {
                     setNews(data.articles);
@@ -19,7 +19,7 @@ const Hooks = (props) => {
     
     const onSubmitButton = () => {
         alert ("telah di submut")
-            fetch('https://newsapi.org/v2/everything?q=apple&from=2022-06-25&to=2022-06-25&sortBy=popularity&apiKey=de31adcbe0a24fbba991c2e0933fd211' + search)
+            fetch('https://newsapi.org/v2/top-headlines?country=id&apiKey=599e0889d56045f4bbff7bc47af4dd32' + search)
             .then(response => response.json())
             .then((data) => {
                     setNews(data.articles);
