@@ -1,14 +1,12 @@
 import React from "react";
-import './index.css';
+import './Bootstrap/index.css';
 import Bio from "./Bootstrap/bio";
 import Friends from "./Bootstrap/friends";
 import Home from "./Bootstrap/home";
 import Skills from "./Bootstrap/skills";
 import Kontak from "./Bootstrap/kontak";
-import Menu from "./Bootstrap/Menu";
-import Footer from "./Bootstrap/footer";
-
-
+import Menu from "./Bootstrap/menu";
+import Footer from "./Bootstrap/footer"
 export default class Styling extends React.Component{
 
     render(){
