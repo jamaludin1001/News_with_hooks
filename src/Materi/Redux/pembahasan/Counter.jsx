@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrementWithCheckingAction, increment } from "../../../app/features/Counter/actions";
 
 const Counter = () =>{
-    let count = useSelector (state => state.counter);
+let {count} = useSelector (state => state.counter);
     const dispatch = useDispatch();
 
     return(
